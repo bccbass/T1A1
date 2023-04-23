@@ -32,10 +32,10 @@ for skill in skills:
     else:
         skills_to_learn.append(skill)
         
-print(f'Your overall coding skill score is {applicant_score}')
+print(f'Your overall coding skill score is {applicant_score}. Consider learning any of these languages to boost your score a bit!:')
 
 for skill in skills_to_learn:
-    print(f'Consider learning {skill}, it could boost your score by {skills[skill]}.')
+    print(f"{skill} will add {skills[skill]} point{'s' if skills[skill] > 1 else ''}.")
 
 print('Thank you for your interest in ACME Corporation!')
 
