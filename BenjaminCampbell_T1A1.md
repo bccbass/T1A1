@@ -82,13 +82,11 @@ $^4$ The Internet: Crash Course Computer Science #29 https://www.youtube.com/wat
 >Explain how each technology has contributed to the development of client and server communication over the internet (50 - 150 words for each technology)
 
 ### TCP
-
-receive
- 1974 a proposal was put forth to link a group of computers together in a decentralized network.To facilitate this 'inter-network' TCP, or transmission control protocol, was proposed as a way to regulate communication between machines.$^1$ TCP is a way to send and receive data securely and reliably over sometimes unreliable and unstable networks.$^2$  TCP uses TCP segments (or packets) to break up data and transfer over various routes. 
-It also implements technologies to ensure secure connections, confirmation of segment receipt  and segment re-ordering when necessary: A three way handshake ensures secure communication, a header attached to the data payload enables checksum data validation, reordering, confirmation receipt of segments and more. TCP is responsible for creating reliable and stable channels over which network applications can communicate.  The most common use case of TCP relating to client/server communication can be found in the familiar act of browsing the web: HTTP, the protocol for requesting and receiving web pages and data, requires a reliable connection and thus is dependent on TCP to transfer its request/response pairs.$^3$ This relationship between HTTP and TCP forms the technological bedrock that facilitates the unfathomable numbers of client/server web interactions that occur daily. 
+In 1974 a proposal was put forth to link a group of computers together in a decentralized network.To facilitate this 'inter-network' TCP, or transmission control protocol, was proposed as a way to regulate communication between machines.$^1$  TCP is a way to send and receive data securely and reliably over sometimes unreliable and unstable networks.$^2$  TCP uses TCP segments (or packets) to break up data and transfer over various routes. 
+It also implements technologies to ensure secure connections, confirmation of receipt  and segment re-ordering when necessary. A three way handshake ensures secure communication and a header attached to the data payload enables checksum data validation, reordering, confirmation receipt of segments and routing log. TCP is responsible for creating reliable and stable channels over which network applications can communicate, forming the basis for file transfers, email and web browsing. Take for example the familiar act of browsing the web: HTTP, the protocol for requesting and receiving web pages and data, requires a reliable connection and depends on TCP to establish secure connections and to transfer request/response pairs.$^3$  TCP is the technological bedrock that facilitates the unfathomable amount of client/server data transferred daily. 
 
 ### HTTP and HTTPS
-HTTP, or Hyper Text Transfer Protocol, is an extensible protocol that governs all exchanges of data on the web.$^3$ It is a client-server process and is always initiated by a client. This is a process that occurs anytime a website is queried; a tcp connection is established, a clients user-agent(typically a web browser) will send a get request for a specific URI or URL (a web address) and after passing through a number of proxies a server will deliver a response in the form of a status message and if successful will serve the requested resource.$^4$ HTTPS is HTTP with added security features. It implements Transport Layer Security (previously SSL) to encrypt and verify requests, creating a secure client-server interaction. HTTPS is crucial for users to safely access servers for banking, e-commerce, transferring sensitive medical as well as general web security and privacy. (5) HTTP requests occur every time a client attempts to access, edit or update a web resource. These take the forms of GET, POST and PATCH requests respectively and occur for every instance a user navigates to a web resource or requests to delete, create or alter a resource. An HTTP request occurs every time a user navigates to a website and its frequency and importance cannot be overstated with regard to client-server interaction. 
+HTTP, or Hyper Text Transfer Protocol, is an extensible protocol that governs all exchanges of data on the web.$^3$ It is a client-server process and is always initiated by a client. This is a process that occurs anytime a website is queried; a tcp connection is established, a clients user-agent(typically a web browser) will send a get request for a specific URI or URL (a web address) and after passing through a number of proxies a server will deliver a response in the form of a status message and if successful will serve the requested resource.$^4$ HTTPS is HTTP with added security features. It implements Transport Layer Security (previously SSL) to encrypt and verify requests, creating a secure client-server interaction. HTTPS is crucial for users to safely access servers for banking, e-commerce, transferring sensitive medical as well as general web security and privacy. (5) HTTP requests occur every time a client attempts to access, edit or update a web resource. These take the forms of GET, POST and PATCH requests respectively and occur for every instance a user navigates to a web resource or requests to view, delete, create or alter a resource. This is the protocol that takes place for every single client/server  interaction.
 
 ### Web Browsers and Developer Tools
 
@@ -116,7 +114,7 @@ $^5$ Why Is HTTP Not Secure? | HTTP vs. HTTPS . https://www.cloudflare.com/learn
 > Identify THREE data structures used in the Python programming language and explain the reasons for using each.
 
 ### **List**
-A list is a comma delimited collection of objects contained within square brackets: ```my_list = [1, 2, 3]```.$^1$ Its contents can be any data type and can be heterogeneous; multiple data types can be contained within the same list. ```my_list = [1, 2, 3, 'A', 3.14] ```. A list can even contain other lists or dictionaries: ```my_nested_list = [[1,2,3], [5,6,7]]```
+A list is a comma delimited collection of objects contained within square brackets: ```my_list = [1, 2, 3]```.$^1$ Its contents can be any data type and can be heterogeneous; multiple data types can be contained within the same list. ``` my_list = [1, 2, 3, 'Cat', 3.14] ```. A list can even contain other lists or dictionaries: ```my_nested_list = [[1,2,3], [5,6,7]]```
 It is indexed, has length and has a host of built-in methods accessible to alter or manipulate its contents. Lists are mutable, meaning their contents can be modified, reassigned and sorted. Additionally lists can have elements removed, inserted, concatenated and appended. They are also iterable, which means they can easily be used in loops:
 ```Python
 my_list = [1, 2, 3]
@@ -126,9 +124,9 @@ for el in my_list:
 Since a variable can only store one value at a time, a list is well suited to store collections of related(or unrelated) objects which can be accessed from the same variable. They can then be manipulated and acted upon relationally as a single data structure. One common use  case is utilizing a list to contain a collection of dictionaries:
 ```Python
 People = [
-{‘person1’: ‘Bobby’},
-{‘person2’: ‘Jimmy’},
-{‘person3’: ‘Jamey’}
+{'person1': 'Bobby'},
+{'person2': 'Jimmy'},
+{'person3': 'Jamey'}
 ]
 ```
 This collection of people can now be iterated over and acted upon as a single data structure containing a group of related elements. 
@@ -153,7 +151,7 @@ would yield:
 To leave a list or tuple intact before manipulating its contents the ```copy()``` function can be called to duplicate it. This creates a completely new data instance with a unique reference ID from the original, which can then be converted to a list and mutated in any number of ways.$^1$
 A tuple is not only implemented to shield contents from alteration but also to signal to other developers the intent and spirit of its intent that the data should remain undisturbed: 
 ```Python
-the_beatles = (‘John’, ‘Paul’, ‘George’, ‘Ringo’)
+the_beatles = ('John', 'Paul', 'George', 'Ringo')
 ```
 
 
@@ -217,8 +215,8 @@ $^3$ “Intro to Javascript.” Introduction to Javascript, Stanford University,
 
 ### Python
 
-Python is an open source, high level programming language developed by Guido van Rossum and released in 1991. It is approachable for beginners to learn thanks to a straightforward syntax, dynamic typing and extremely robust build in library.$^1$ The Python community is extremely active resulting in a great deal of resources for new developers learning the language. There are also a great many external modules and packages that can be imported to extend Pythons functionality. Python is used in a wide array of applications; data analysis, scientific and web applications and perhaps most notably machine learning and artificial intelligence. Thanks to a straightforward and dynamically typed syntax and lack of a compiling process creating programs can be swift and is well suited to Rapid Application Development.$^2$  
-Some drawbacks of Python could be seen as a direct result of its strengths and are most notably experienced in speed and memory usage. Because Python is interpreted and dynamically typed its runtime compiler has to validate every variable when running a program. Python is also not optimized for conservative memory usage, with a garbage collection process that is not as efficient as other languages.$^3$ Python has also not been tailored towards web and mobile applications, is not tailored to database intensive applications and does not support multi-threaded processing.
+Python is an open source, high level programming language developed by Guido van Rossum and released in 1991. It is approachable for beginners to learn thanks to a straightforward syntax, dynamic typing and robust built-in library.$^1$ The Python developer community is extremely active which results in a great deal of resources available to new developers learning the language. There are also extensive open source external modules and packages that can be imported to extend Pythons functionality. It lends itself to different programming paradigms including procedural and Object Oriented Programming. Python is used in a wide array of applications; data analysis, scientific and web applications and perhaps most notably machine learning and artificial intelligence. Creating programs in Python can be swift, making it well suited to Rapid Application Development.$^2$  
+Some drawbacks of Python could be seen as a direct result of its strengths, and are most notably experienced relating to speed and memory usage. Because Python is interpreted and dynamically typed its runtime compiler (Python virtual machine) has to validate every variable when running a program. Python is also not optimized for conservative memory usage, with a garbage collection process that is less efficient than many other languages.$^3$ Python is not tailored towards web and mobile applications or database intensive applications and does not support multi-threaded processing.
 
 ### C
 
@@ -242,7 +240,54 @@ $^6$ Ravikiran, A S. “The Difference between C and C++.” Simplilearn.com, Si
 <br />
 <br />
 
-# Q8
+## Q8  
+
+>Explain control flow, using examples from the Python programming language  
+
+
+Control flow is the order in which a computer program executes its code. Without any conditional logic, programming languages such as Python and JavaScript execute sequentially, line by line from top to bottom. This is acceptable when there is no need for conditional logic or dynamically changing variables: 
+```Python
+def areaOfRectangle(length, width):
+2       return length * width
+3   
+4   print(areaOfRectangle(12, 16))
+#prints 192
+```
+In this example we define the function areaOfRectangle first, we then invoke the function with hard coded values of 12 and 16. The code is executed sequentially and prints our result of 192.
+
+In order to create dynamically controlled flow within a program we can implement conditional logic. The backbone of conditional logic is the ternary operator, or Boolean. A Boolean is either ```True``` or ```False```, and combined with ```else```, ```elif``` (else if), and ```else``` statements help to create more complex and flexible programs. With these structures we are able to control under which conditions certain blocks of code will be executed. With conditional logic introduced into our control flow the program ceases to have to execute sequentially:
+```Python
+def weatherSummary(isRaining):
+    if isRaining:
+        print("It's wet outside")
+    else:
+        print("Let's get out of the house!")
+
+```
+In this previous code example we are able to account for two different dynamic conditions: is it raining or not? For each unique condition we are able to control which blocks of code will be executed and pass over the code that does not pertain to our particular scenario.  
+
+We can combine and alter different conditional scenarios with Boolean Operators ```and```, ```or```, and ```not```. The ```and``` and ```or``` operators are used to string together multiple conditional statements. 
+```Python
+if isRaining and isCold:
+    print('Stay inside, it is miserable out there')
+
+if isSunny or houseOnFire:
+    print('I think we should get outside.')
+```
+The ```and``` operator requires both conditionals evaluate to true, while the ```or``` operator requires just one condition (or more) to evaluate to true.
+
+The ```not``` operator negates any proceeding statement:
+```Python
+1   isRaining = False
+2   
+3   if not isRaining:
+4       print('I will not need an umbrella today!')
+
+```
+This double negative of 'not false' results in a True evaluation to let us know it will not be raining in the near future.
+
+Understanding and controlling the flow of a program is essential to creating useful and powerful code able to conform to various dynamic conditions. It also creates more efficient code that can avoid running unneeded or superfluous blocks of code for a given scenario. 
+
 
 <br />
 <br />
@@ -250,7 +295,7 @@ $^6$ Ravikiran, A S. “The Difference between C and C++.” Simplilearn.com, Si
 # Q9
 
 Both type coercion and type conversion act to change the data type of a given object. The main difference between the two is the nature of the catalyst that initiates the conversion: type coercion is usually implicit, whereas type conversion is always explicit.$^1$  
-Python utilizes both type coercion and type conversion. Some examples of type conversion in Python can be found in the ```int()```, ```float()```, ```str()```, ```list()``` and ```tuple()``` functions. When invoked these functions will convert a given argument to a specified data type (integer, float or string, respectively). This conversion happens only when the function is invoked and passed an argument, making it an explicit action. One use case of type conversion can be found in accepting a number input from an input prompt. The ```input()``` function automatically casts any input as a string. To use this input in a mathematical expression it must be converted to a numerical type:  
+Python utilizes both type coercion and type conversion. Some examples of type conversion in Python can be found in the ```int()```, ```float()```, ```str()```, ```list()``` and ```tuple()``` functions. When invoked these functions will convert a given argument to a specified data type (integer, float, string, list or tuple, respectively). This conversion happens only when the function is invoked and passed an argument, making it an explicit action. One use case of type conversion can be found in accepting a number input from an input prompt. The ```input()``` function automatically casts any input as a string. To use this input in a mathematical expression it must be converted to a numerical type:  
 
 ```Python
 #input is automatically cast as a string:
@@ -316,17 +361,17 @@ print(firstLetter) # prints 'H'
  ```
  Strings are essential to programming language as they introduce meaning and human readability to code. They allow us to store, manipulate and make use of the most familiar and universal type of human communication and expression.  
 
-A **Bool** is short for Boolean, named for English mathematician George Boole. 4.  
-A Boolean is used to represent two states: True or False. Bools are essential in programming as they are the basis of control flow structures and conditional logic. They are particularly useful in computer science as their True/False structure is analogous to a computers Binary language: 1 or 0, True or False.$^5$
+The **Boolean** is named for English mathematician George Boole. 4.  
+It is used to represent two states: True or False. Booleans are essential in programming as they are the basis of control flow structures and conditional logic. They are particularly useful in computer science as their True/False structure is analogous to a computers Binary language: 1 or 0, True or False.$^5$
 A simple example of a boolean used in a control flow: 
-``` 
-isRaining = True  #Assign isRaining variable to True
+```Python 
+isRaining = True  #Assign isRaining variable to Boolean True
    
 if isRaining:  #Checks if it is raining outside to control the flow of the output phrase.  
 
     print("Stay inside or you will get wet") # If it is raining print to stay inside
 
-else: print("Go out and play!)  #Otherwise it prints its safe to go outside and play.
+else: print("Go out and play!")  #Otherwise it prints its safe to go outside and play.
 
 ```  
 
@@ -355,9 +400,9 @@ $^5$ CS50 2019 Lecture 0 : Youtube https://www.youtube.com/watch?v=jjqgP9dpD1k&t
 
 *NOTE: While I find the premise of a potential labor dispute being solved with automation and technology morally questionable and in direct conflict with the spirit of Question 7, I will assume the entire staff has won the lottery on a group ticket and no longer needs to work.*
 
-Creating an app to replace the entire staff of a restaurant would be tricky indeed. It would require functionality to cover front of house concerns; greeting and seating diners, take and process orders, check on diners throughout meal (refill? more BBQ Sauce?) and running food from the kitchen to the diner when ready. Back of house concerns would require a huge amount of physical infrastructure to replace line cooks, chefs and food runners, not to mention handling and preparing ingredients. There is also the issue of sequencing incoming orders to make sure they are prepared and delivered as a set and in a timely fashion. There are the monetary concerns of accepting and processing payment; digital, bank cards and cash (cashless restaurants pose a problem as they exclude customers who are unbanked or too young have credit or debit cards)$^1$. There is also the issue of keeping track of stock of food ingredients and reusables (napkins, cutlery etc.) and keeping track of their inventory and expiry dates so they can be reordered before running out. Some classes I might employ to address these concerns when building the restaurant app:
+Creating an app to replace the entire staff of a restaurant would be tricky indeed. It would require functionality to cover front of house concerns; greeting and seating diners, taking and processing orders, checking on diners throughout meal (refill? more BBQ Sauce?) and running food from the kitchen to the diner when ready. Back of house concerns would require a huge amount of physical infrastructure to replace line cooks, chefs and food runners, not to mention handling and preparing ingredients. There is also the issue of sequencing incoming orders to make sure they are prepared and delivered as a set and in a timely fashion. There are the monetary concerns of accepting and processing payment; digital, bank cards and cash (cashless restaurants pose a problem as they exclude customers who are unbanked or too young have credit or debit cards)$^1$. There is also the issue of keeping track of stock of food ingredients and reusables (napkins, cutlery etc.) and keeping track of their inventory and expiry dates so they can be reordered before running out. Some classes I might employ to address these concerns when building the restaurant app:
 
-### Menu Item: 
+### MenuItem: 
 This class encompasses the menu items offered to customers. It is the most forward facing class as it is the main attraction of any restaurant. It might include price, time offered(breakfast, lunch, dinner), is_featured_special, seasonal, alergen_information. This class must not only provide pertinent information about menu items but also contain some amount of enticement to attract customers to the menu item to inspire purchase. 
 ```Python 
 menu_item = {
@@ -373,8 +418,8 @@ menu_item = {
 ```
 
 
-### Ingredient Item:
-This is the class for inventory of recipe ingredients: the bulk stores of produce, bread, meat etc. This class includes name, quantity, order delivery estimate, expiration dates, distributors, last ordered and perhaps most importantly quantity on hand. There might be methods to alert when stock is running low so restock can be ordered in time. Or methods to alert when a large number quantity of an item is approaching expiry date to create a special so it is used before it can no longer be served. I would use this class as it is imperative to know what ingredients are on hand and keep necessary stock so menu items are always available. 
+### IngredientItem:
+This is the class for inventory of recipe ingredients: the bulk stores of produce, salt, sugar, bread, meat etc. This class includes name, order delivery estimate, expiration dates, distributors, last ordered and perhaps most importantly quantity on hand. There might be methods to alert when stock is running low so restock can be ordered in time. Or methods to alert when a large quantity of an item is approaching expiry date so a special can be offered to ensure it is used before it goes bad. This class is imperative to know what ingredients are on hand and to keep necessary stock so menu items are always available. 
 ```Python 
 ingredient_item = { 
 'name': ,
@@ -389,8 +434,8 @@ method: create special item large quantity and sellby date is approaching
 }
 ```
 
-### Reusable Item:
-This would be a class to cover all reusable items such as napkins, cutlery, takeout boxes and menus. Similar to the ingredient class it is important to keep track of reusable items so they do not run out and customers can dine/take out orders without interruption or inconvenience. 
+### ReusableItem:
+This would be a class to cover all reusable items such as napkins, cutlery, takeout boxes and paper menus. Similar to the ingredient class it is important to keep track of reusable items so they do not run out and customers can dine in or take orders out without interruption or inconvenience. 
 ```Python
 single_use_supply = {
 'quantity': ,
@@ -402,8 +447,8 @@ method: low qty alert, reorder
 }
 ```
 
-### customer_order:
-This class covers each instance of an order (covering a range of 1 or more individuals in a given party). It is essential to associate a customer, their payment information and their order details can be paid, prepared and served accordingly. This class might have and order number, time ordered, items ordered ( which would need an associated list of dictionaries to cover items would need to be associated with different party members and special requests and allergy information), total order sum. Some methods included in this class might be order tracking, serve time estimate or bill splitting. This class is the main the main conduit between customer and restaurant and is integral to a functional restaurant apps success - customers have to be able to order and pay for items, and the process of preparation and delivery must be robust or there is literally no business model. 
+### CustomerOrder:
+This class covers each instance of an order (covering a range of 1 or more individuals in a given party). It is essential to associate a customer, their payment information and their order details. This class might have an order number, time ordered,  total order sum, items ordered (which would need an associated list of dictionaries to cover items to be associated with different party members and another for special requests and allergy information). Some methods included in this class might be order tracking, serve time estimate or bill splitting. This class is the main conduit between customer and restaurant and is integral to a functional restaurant apps success - customers have to be able to order and pay for items, and the process of preparation and delivery must be robust or there is literally no business model. 
 ```Python
 'customer_order' = {
 'ordered_items': List,
@@ -430,7 +475,7 @@ visit_log: frequency,
 frequently-ordered_items: List
 }
 ```
-### Customer Review:
+### CustomerReview:
 This class would cover reviews of the restaurant to help with internal quality control as well as keeping the establishment competitive and profitable. It could also be useful in regard to advertising material. Classes could include food quality, customer experience, ambience etc all with an integer range. A fuller more verbose review section would also be a wise addition to the class. 
 ```Python
 customer_review = {
@@ -441,8 +486,9 @@ customer_review = {
 'would_recommend': boolean,
 'review': string
 }
-```
 
+```
+ 
  
 $^1$ McCart, Melissa. “The Problem with Cashless Restaurants.” Eater, Eater, 15 Feb. 2018, https://www.eater.com/2018/2/15/16974980/cashless-restaurants-credit-card-only-legal-problem-discriminatory. 
 
@@ -489,17 +535,18 @@ arr[i+1] = indexCache
 
 *Definition of Prime number: Any positive integer that is divisible by exactly two numbers only* 1.
 
+- This is the process for each number from 1-100
 - Start with a divisor set to 1.
 - Check to see if input number has *at least* two unique factors:   
-    - i/divisor & i/i should yield two unique numbers.
+    - input number divided by 1 & input divided by itself should yield two unique numbers.
     (this covers the edge case of 1).
-        - If not two unique numbers input is not prime, move to next input number.
-        - If so proceed to next step.
-- Increase divisor by one and check if it divides evenly into the input number.
-    - If NO: repeat the previous step (checking if input is divisible by any number other than 1 and itself.)
-    - If YES:
-        - *divisor < input number*?: we have found a third factor which means number is not prime, move to next input number. 
-        -  *divisor = input number*?: we have proceeded through all numbers without finding any additional factors. This number has exactly two factors so we can add input number to list of Prime Numbers.
+    - If not two unique numbers the input is not prime, move to next input number.
+    - If so proceed to next step.
+- Increment divisor by one and check if it divides evenly into the input number.
+    - If it does not: repeat the previous step (checking if input is divisible by any number other than 1 and itself.)
+    - If it does:
+        - If *divisor is less than the input number*: we have found a third factor which means number is not prime, move to next input number. 
+        - If *divisor equals input number*: we have proceeded through all numbers without finding any additional factors. This number has exactly two factors so we can add input number to list of Prime Numbers.
 - Repeat this process for each number up to 100. 
 
 1. *Is One a Prime Number*: Wellington Faculty of Science: https://www.wgtn.ac.nz/science/ask-a-researcher/is-1-a-prime-number
@@ -547,30 +594,39 @@ applicant_skills = []
 skills_to_learn = []
 applicant_score = 0
 
-print('Enter programming languages known. Press enter when complete.')
+print('Enter programming languages known. Press enter when complete: ')
 
-
+# Collect all skills from User and store in list:
 while True:
-    skill = input()
+    skill = input().lower()
     if skill == '':
         break
-    elif skill not in skills:
-        print("I don't know that language, please check and try again.")
     else:
         applicant_skills.append(skill)
- 
-
-for skill in skills:
-    if skill in applicant_skills:
-        applicant_score += skills[skill]
+    
+# Loop over skills dictionary to tally score of known languages and append unknowns to skills_to_learn
+# Creating skills_to_learn list with keys from skills dictionary helps with cAsE formatting/matching for later logic.
+for k, v in skills.items():
+    if k.lower() in applicant_skills:
+        applicant_score += v
     else:
-        skills_to_learn.append(skill)
+        skills_to_learn.append(k)
         
 print(f'Your overall coding skill score is {applicant_score}. Consider learning any of these languages to boost your score a bit!:')
 
+# loop through skills_to_learn list and access corresponding skills dict items to display.
 for skill in skills_to_learn:
     print(f"{skill} will add {skills[skill]} point{'s' if skills[skill] > 1 else ''}.")
 
 print('Thank you for your interest in ACME Corporation!')
+
+
+# This logic (47-49) could replace lines 39-40 and eliminate need for skills_to_learn list. 
+# It loops over skills dictionary, comparing keys to applicant skills to find skills missing. 
+# I ultimately opted for the skills_to_learn list approach as it creates a potentially shorter loop iteration (what if the skills dict grows to contain 100 key/value pairs?) as well as having another data point stored for each applicant. 
+
+# for k, v in skills.items():
+#     if k.lower() not in applicant_skills:
+#         print(f"{k} will add {v} point{'s' if v > 1 else ''}.")
 
 ```

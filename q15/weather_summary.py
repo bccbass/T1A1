@@ -1,14 +1,14 @@
-def weatherSummaryOne(isRaining, temp):
-    if isRaining:
-        if temp < 15:
-            print("It's wet and cold")
-        else:
-            print("It's warm and raining")
-    else:
-        if temp < 15:
-            print("It's not raining but cold")
-        else:
-            print("It's warm but not raining")
+# def weatherSummaryOne(isRaining, temp):
+#     if isRaining:
+#         if temp < 15:
+#             print("It's wet and cold")
+#         else:
+#             print("It's warm and raining")
+#     else:
+#         if temp < 15:
+#             print("It's not raining but cold")
+#         else:
+#             print("It's warm but not raining")
 
 
 
@@ -22,7 +22,7 @@ def weatherSummaryTwo(isRaining, temp):
     else:
         print("It's warm but not raining")
 
-
+weatherSummaryTwo(False, 14)
 # weatherSummary(True, 14)
 
 # celsius = float(input())
@@ -30,20 +30,3 @@ def weatherSummaryTwo(isRaining, temp):
 # farehnheit = (celsius*9/5)+32
 
 # print(f"The result is: {farehnheit}.")
-
-arr = [5, 22, 29, 39, 19, 51, 78, 96, 84]
-
-i = 0
-
-while (i < len(arr) -1) and (arr[i] < arr[i+1]):
-    i += 1
-print(i)
-indexCache = arr[i]
-arr[i] = arr[i+1]
-arr[i+1] = indexCache
-
-
-
-print(arr)
-
-
