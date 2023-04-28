@@ -530,7 +530,7 @@ arr[i+1] = indexCache
 
 # Q14
 
-![prime-number-flow](./prime-numbers-1-100.png)
+![prime-number-flow](./prime-numbers-flow-refactor.png)
 
 
 *Definition of Prime number: Any positive integer that is divisible by exactly two numbers only* 1.
