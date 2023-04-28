@@ -549,6 +549,25 @@ arr[i+1] = indexCache
         - If *divisor equals input number*: we have proceeded through all numbers without finding any additional factors. This number has exactly two factors so we can add input number to list of Prime Numbers.
 - Repeat this process for each number up to 100. 
 
+*One possible Python solution:*
+```Python
+prime_numbers = []
+
+for num in range(1, 101):
+    div = 1
+    for div in range(1, num+1):
+        if num/1 == num/num:
+            break
+        else: 
+            div += 1
+            if num%div == 0 and num==div:
+                prime_numbers.append(num)
+            elif num%div == 0:
+                break
+
+print((prime_numbers))
+```
+
 1. *Is One a Prime Number*: Wellington Faculty of Science: https://www.wgtn.ac.nz/science/ask-a-researcher/is-1-a-prime-number
 
 
