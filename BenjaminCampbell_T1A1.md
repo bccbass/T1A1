@@ -323,7 +323,7 @@ Because a computer cannot differentiate variable types and the ways they can and
 
 ### A few examples of data types in Python:
 
-**Numeric types** encompass three subtypes: **int, float** and **complex**. 1.
+**Numeric types** encompass three subtypes: **int, float** and **complex**.$^1$
 
 - An int represents an integer: a whole number without a fractional component, either positive or negative. `eg. 1, 8, -16, -256`
 - A float represents any number, positive or negative, that has a decimal with a fractional component.
@@ -338,7 +338,7 @@ Why not just have one numerical data type? Storing unneeded fractional or imagin
 
 Numeric types are used strictly to represent values and for implementation in mathematical contexts. For a numerical symbol to be used in a string statement it must be converted to a string type first.$^3$
 
-**Strings** are an indexed list (or array) of unicode characters contained within either single `` ` `` or double `"` quotation marks. Strings are typically used to represent words, sentences and phrases. They are zero-indexed, have length and their contents can be accessed using bracket notation like any array.:
+**Strings** are an indexed list (or array) of unicode characters contained within either single `` ' `` or double `"` quotation marks. Strings are typically used to represent words, sentences and phrases. They are zero-indexed, have length and their contents can be accessed using bracket notation like any array.:
 
 ```
 myString = "Hello, world!"
@@ -348,8 +348,7 @@ print(firstLetter) # prints 'H'
 
 Strings are essential to programming language as they introduce meaning and human readability to code. They allow us to store, manipulate and make use of the most familiar and universal type of human communication and expression.
 
-The **Boolean** is named for English mathematician George Boole. 4.  
-It is used to represent two states: True or False. Booleans are essential in programming as they are the basis of control flow structures and conditional logic. They are particularly useful in computer science as their True/False structure is analogous to a computers Binary language: 1 or 0, True or False.$^5$
+The **Boolean** is named for English mathematician George Boole.$^4$ It is used to represent two states: True or False. Booleans are essential in programming as they are the basis of control flow structures and conditional logic. They are particularly useful in computer science as their True/False structure is analogous to a computers Binary language: 1 or 0, True or False.$^5$
 A simple example of a boolean used in a control flow:
 
 ```Python
@@ -496,7 +495,7 @@ $^1$ McCart, Melissa. “The Problem with Cashless Restaurants.” Eater, Eater,
 
 # Q12
 
-The code snippet below will not run because the `input()` function automatically stores user input as a string. Python will not coerce it to a number when attempting the proceeding mathematic expression of `(celsius*9/5)+32`. To test this we can invoke the `type()` function with `celsius` as an argument and it will confirm that it is a string. Because Python does not type coerce from string to float/int we will need to employ type conversion to convert the user input assigned to the celsius variable to a numeric type for the function to work as expected.
+The code snippet below will not run because the `input()` function automatically stores user input as a string. Python will not coerce it to a number when attempting the mathematic expression  `(celsius*9/5)+32`. To test this we can invoke the `type()` function with `celsius` as an argument and it will confirm that it is a string. Because Python does not type coerce from string to float/int we will need to employ type conversion to convert the user input assigned to the celsius variable to a numeric type for the function to work as expected.
 
 _one possible solution:_
 
